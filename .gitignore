@@ -1,0 +1,6 @@
+philosophy/
+.idea/
+*.DS_Store*
+*.log
+*.aux
+*.gz

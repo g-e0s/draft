@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage[hmarginratio=4:3, top=20mm, left=30mm, columnsep=20pt]{geometry} % Document 
+
+
+\title{
+Theoretical Assignment
+DeepBayes Summer School 2018 (deepbayes.ru)}
+
+\begin{document}
+\maketitle
+\section{Problem 1}
+By definition  \par
+\begin{align*}
+P(\xi = k) &= \frac{e^{-\lambda} \lambda^k}{k!} \\
+P(\eta = s | \xi = k) &= \binom{k}{s} p^s (1-p)^{k-s} \\
+\end{align*}
+
+
+Applying the law of total probability we have
+\begin{align*}
+P(\eta = s) &= \sum_{k=s}^{\infty} P(\eta = s | \xi = k) P(\xi = k) 
+= \sum_{k=s}^{\infty} \frac{k!}{s! (k - s)!} p^s (1-p)^{k-s}  \frac{e^{-\lambda} \lambda^k}{k!} \\
+&= \frac{e^{-\lambda} \lambda^s p^s}{s!} \cdot \sum_{k=s}^{\infty} \frac{(\lambda (1 - p))^{k - s}}{(k-s)!}
+\end{align*}
+The infinite sum is a Maclaurin series of exponential function $e^{\lambda (1 - p)}$ , so after substitution we get:
+\begin{align*}
+\frac{e^{-\lambda} \lambda^s p^s}{s!} \cdot \sum_{k=s}^{\infty} \frac{(\lambda (1 - p))^{k - s}}{(k-s)!} = \frac{e^{-\lambda} \lambda^s p^s}{s!} \cdot e^{\lambda (1 - p)} 
+&= \frac{e^{-\lambda p} (\lambda p)^s}{s!} 
+= \frac{e^{-(\lambda p)} (\lambda p)^s}{s!} 
+\end{align*}
+
+Resulting probability distribution is Poisson with parameter $\lambda p$
+
+\section{Problem 2}
+Lets denote $i$ as an index of reviewer: $i = 1$ for a strict reviewer and $i = 2$ for a kind one.
+By the Bayes rule and the definition of normal distribution: \par
+
+\begin{align*}
+P(i = 2 | t_i = 10) &= \frac{P(t_i = 10 | i = 2) \cdot P(i = 2)}{P(t_i = 10 | i = 1) \cdot P(i = 1) + P(t_i = 10 | i = 2) \cdot P(i = 2)} \\
+ &= \frac{\frac{1}{5 \sqrt{2 \pi}} \cdot e^{\frac{-(10 - 20)^2}{2 \cdot 5^2}}}{\frac{1}{5 \sqrt{2 \pi}} \cdot e^{\frac{-(10 - 20)^2}{2 \cdot 5^2}} + \frac{1}{10 \sqrt{2 \pi}} \cdot e^{\frac{-(10 - 30)^2}{2 \cdot 10^2}}} 
+ = \frac{e^{-2}}{e^{-2} + \frac{1}{2} e^{-2}} = \frac{2}{3}
+\end{align*}
+
+
+\end{document}
