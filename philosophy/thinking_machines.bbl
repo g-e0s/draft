@@ -1,0 +1,31 @@
+\begin{thebibliography}{1}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\language\csname l@#1\endcsname\fi}
+\providecommand*{\href}[2]{{\small #2}}
+\providecommand*{\url}[1]{{\small #1}}
+\providecommand*{\BibUrl}[1]{\url{#1}}
+\providecommand{\BibAnnote}[1]{}
+\providecommand*{\BibEmph}[1]{#1}
+\providecommand*{\cyrdash}{\hbox to.8em{--\hss--}}
+\providecommand*{\BibDash}{\ifdim\lastskip>0pt\unskip\nobreak\hskip.2em\fi
+\cyrdash\hskip.2em\ignorespaces}
+
+\bibitem{turing1950computing}
+\selectlanguageifdefined{English}
+\BibEmph{Turing~A.~M.} Computing machinery and intelligence~// \BibEmph{Mind}.
+  \BibDash
+\newblock 1950. \BibDash
+\newblock Vol.~59, no. 236. \BibDash
+\newblock P.~433--460. \BibDash
+\newblock URL: \BibUrl{http://www.jstor.org/stable/2251299}.
+
+\bibitem{Searle80minds}
+\selectlanguageifdefined{english}
+\BibEmph{Searle~J.~R.} Minds, brains, and programs~// \BibEmph{Behavioral and
+  Brain Sciences}. \BibDash
+\newblock 1980. \BibDash
+\newblock Vol.~3. \BibDash
+\newblock P.~417--424.
+
+\end{thebibliography}

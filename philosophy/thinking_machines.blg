@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thinking_machines.aux
+The style file: gost2008.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: bibliography.bib
+Warning--language is not defined: Englishvvol
+Warning--language is not defined: Englishnr
+Warning--language is not defined: Englishppages
+You've used 2 entries,
+            3962 wiz_defined-function locations,
+            1114 strings with 9888 characters,
+and the built_in function-call counts, 982 in all, are:
+= -- 130
+> -- 10
+< -- 5
++ -- 4
+- -- 2
+* -- 64
+:= -- 98
+add.period$ -- 11
+call.type$ -- 2
+change.case$ -- 2
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 49
+empty$ -- 90
+format.name$ -- 2
+if$ -- 249
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 0
+newline$ -- 29
+num.names$ -- 6
+pop$ -- 6
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 45
+stack$ -- 0
+substring$ -- 64
+swap$ -- 43
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 8
+width$ -- 3
+write$ -- 49
+(There were 3 warnings)
