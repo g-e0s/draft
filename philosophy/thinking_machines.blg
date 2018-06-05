@@ -7,45 +7,45 @@ Database file #1: bibliography.bib
 Warning--language is not defined: Englishvvol
 Warning--language is not defined: Englishnr
 Warning--language is not defined: Englishppages
-You've used 8 entries,
+You've used 11 entries,
             3962 wiz_defined-function locations,
-            1163 strings with 10807 characters,
-and the built_in function-call counts, 3356 in all, are:
-= -- 441
-> -- 55
-< -- 21
-+ -- 20
-- -- 12
-* -- 214
-:= -- 335
-add.period$ -- 39
-call.type$ -- 8
-change.case$ -- 8
+            1186 strings with 11228 characters,
+and the built_in function-call counts, 4486 in all, are:
+= -- 588
+> -- 74
+< -- 29
++ -- 27
+- -- 16
+* -- 284
+:= -- 446
+add.period$ -- 53
+call.type$ -- 11
+change.case$ -- 11
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 177
-empty$ -- 331
-format.name$ -- 12
-if$ -- 876
+cite$ -- 11
+duplicate$ -- 241
+empty$ -- 446
+format.name$ -- 16
+if$ -- 1174
 int.to.chr$ -- 0
-int.to.str$ -- 8
+int.to.str$ -- 11
 missing$ -- 0
-newline$ -- 69
-num.names$ -- 25
-pop$ -- 31
+newline$ -- 89
+num.names$ -- 34
+pop$ -- 43
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 139
+skip$ -- 185
 stack$ -- 0
-substring$ -- 177
-swap$ -- 148
-text.length$ -- 13
+substring$ -- 230
+swap$ -- 200
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 30
-width$ -- 9
-write$ -- 146
+while$ -- 39
+width$ -- 13
+write$ -- 193
 (There were 3 warnings)

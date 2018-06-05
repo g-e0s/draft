@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \def\selectlanguageifdefined#1{
 \expandafter\ifx\csname date#1\endcsname\relax
 \else\language\csname l@#1\endcsname\fi}
@@ -74,5 +74,28 @@
 \newblock 1980. \BibDash
 \newblock Vol.~3. \BibDash
 \newblock P.~417--424.
+
+\bibitem{Dennett1978-DENTAC}
+\selectlanguageifdefined{english}
+\BibEmph{Dennett~D.~C.} Toward a cognitive theory of consciousness~//
+  \BibEmph{Minnesota Studies in the Philosophy of Science}. \BibDash
+\newblock 1978. \BibDash
+\newblock Vol.~9.
+
+\bibitem{Rey1986-REYWRG}
+\selectlanguageifdefined{english}
+\BibEmph{Rey~G.} What's really going on in searle's 'chinese room'~//
+  \BibEmph{Philosophical Studies}. \BibDash
+\newblock 1986. \BibDash
+\newblock Vol.~50, no. September. \BibDash
+\newblock P.~169--85.
+
+\bibitem{Churchland1990-CHUCAM}
+\selectlanguageifdefined{english}
+\BibEmph{Churchland~P.~M., Churchland~P.~S.} Could a machine think?~//
+  \BibEmph{Scientific American}. \BibDash
+\newblock 1990. \BibDash
+\newblock Vol. 262, no.~1. \BibDash
+\newblock P.~32--37.
 
 \end{thebibliography}
