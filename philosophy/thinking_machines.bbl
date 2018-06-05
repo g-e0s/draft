@@ -11,6 +11,13 @@
 \providecommand*{\BibDash}{\ifdim\lastskip>0pt\unskip\nobreak\hskip.2em\fi
 \cyrdash\hskip.2em\ignorespaces}
 
+\bibitem{Harnad2001-HARWWA}
+\selectlanguageifdefined{english}
+\BibEmph{Harnad~S.} What's wrong and right about searle's chinese room
+  argument?~// [Book Chapter] (in Press)~/ Ed.\ by\ Michael~A.~Bishop,
+  John~M.~Preston. \BibDash
+\newblock Oxford University Press, 2001.
+
 \bibitem{turing1950computing}
 \selectlanguageifdefined{English}
 \BibEmph{Turing~A.~M.} Computing machinery and intelligence~// \BibEmph{Mind}.
@@ -19,6 +26,46 @@
 \newblock Vol.~59, no. 236. \BibDash
 \newblock P.~433--460. \BibDash
 \newblock URL: \BibUrl{http://www.jstor.org/stable/2251299}.
+
+\bibitem{Gunderson1964-KEIDLM}
+\selectlanguageifdefined{english}
+\BibEmph{Gunderson~K.} Descartes, la mettrie, language, and machines~//
+  \BibEmph{Philosophy}. \BibDash
+\newblock 1964. \BibDash
+\newblock Vol.~39, no. 149. \BibDash
+\newblock P.~193--222.
+
+\bibitem{Bringsjord2001-BRICTT-3}
+\selectlanguageifdefined{english}
+\BibEmph{Bringsjord~S., Bello~P., Ferrucci~D.~A.} Creativity, the turing test,
+  and the (better) lovelace test~// \BibEmph{Minds and Machines}. \BibDash
+\newblock 2001. \BibDash
+\newblock Vol.~11, no.~1. \BibDash
+\newblock P.~3--27.
+
+\bibitem{Block1981-BLOPAB}
+\selectlanguageifdefined{english}
+\BibEmph{Block~N.} Psychologism and behaviorism~// \BibEmph{Philosophical
+  Review}. \BibDash
+\newblock 1981. \BibDash
+\newblock Vol.~90, no.~1. \BibDash
+\newblock P.~5--43.
+
+\bibitem{French1990-FRESAT}
+\selectlanguageifdefined{english}
+\BibEmph{French~R.~M.} Subcognition and the limits of the turing test~//
+  \BibEmph{Mind}. \BibDash
+\newblock 1990. \BibDash
+\newblock Vol.~99, no. 393. \BibDash
+\newblock P.~53--66.
+
+\bibitem{Harnad1989-HARMMA-3}
+\selectlanguageifdefined{english}
+\BibEmph{Harnad~S.} Minds, machines and searle~// \BibEmph{Journal of
+  Experimental and Theoretical Artificial Intelligence}. \BibDash
+\newblock 1989. \BibDash
+\newblock Vol.~1, no.~4. \BibDash
+\newblock P.~5--25.
 
 \bibitem{Searle80minds}
 \selectlanguageifdefined{english}
