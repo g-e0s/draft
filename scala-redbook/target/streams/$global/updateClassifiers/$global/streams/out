@@ -282,14 +282,11 @@
 [debug] == resolving dependencies default#scala-redbook$sources;0.1->org.scala-lang#scala-reflect;2.12.6 [scala-tool->master]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
+[debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.6!scala-library.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.6!scala-compiler.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.6!scala-reflect.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
-[debug] 		tried /Users/g.sarapulov/.ivy2/local/org.scala-lang/scala-library/2.12.6/srcs/scala-library-sources.jar
-[debug] 		tried /Users/g.sarapulov/.ivy2/local/jline/jline/2.14.6/srcs/jline-sources.jar
-[debug] 		tried /Users/g.sarapulov/.ivy2/local/org.scala-lang/scala-compiler/2.12.6/srcs/scala-compiler-sources.jar
-[debug] 		tried /Users/g.sarapulov/.ivy2/local/org.scala-lang/scala-reflect/2.12.6/srcs/scala-reflect-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.6/scala-library-2.12.6-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.6/scala-reflect-2.12.6-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.6/scala-compiler-2.12.6-sources.jar
 [debug] no default ivy user dir defined: set to /Users/g.sarapulov/.ivy2
 [debug] including url: jar:file:/Users/g.sarapulov/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] no default cache defined: set to /Users/g.sarapulov/.ivy2/cache
@@ -297,7 +294,7 @@
 [debug] including url: jar:file:/Users/g.sarapulov/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] including url: jar:file:/Users/g.sarapulov/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] including url: jar:file:/Users/g.sarapulov/.sbt/boot/scala-2.12.6/org.scala-sbt/sbt/1.1.5/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (11ms)
+[debug] settings loaded (10ms)
 [debug] 	default cache: /Users/g.sarapulov/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -306,37 +303,16 @@
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] 		tried https://repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6-sources.jar
-[info] downloading https://repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6-sources.jar ...
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.6/scala-library-2.12.6-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.6/scala-library-2.12.6-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.6/scala-reflect-2.12.6-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.6/scala-reflect-2.12.6-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.6/scala-compiler-2.12.6-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.6/scala-compiler-2.12.6-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6-sources.jar
-[info] 	[SUCCESSFUL ] jline#jline;2.14.6!jline.jar(src) (2329ms)
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.6/scala-reflect-2.12.6-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.6/scala-reflect-2.12.6-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.12.6!scala-reflect.jar(src) (2766ms)
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.6/scala-library-2.12.6-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.6/scala-library-2.12.6-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-library;2.12.6!scala-library.jar(src) (3058ms)
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.6/scala-compiler-2.12.6-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.6/scala-compiler-2.12.6-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.12.6!scala-compiler.jar(src) (3491ms)
-[debug] :: resolution report :: resolve 30ms :: artifacts dl 3499ms
-[debug] 	report for default#scala-redbook$sources;0.1 compile produced in /Users/g.sarapulov/PycharmProjects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-compile.xml
-[debug] 	report for default#scala-redbook$sources;0.1 runtime produced in /Users/g.sarapulov/PycharmProjects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-runtime.xml
-[debug] 	report for default#scala-redbook$sources;0.1 test produced in /Users/g.sarapulov/PycharmProjects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-test.xml
-[debug] 	report for default#scala-redbook$sources;0.1 provided produced in /Users/g.sarapulov/PycharmProjects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-provided.xml
-[debug] 	report for default#scala-redbook$sources;0.1 optional produced in /Users/g.sarapulov/PycharmProjects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-optional.xml
-[debug] 	report for default#scala-redbook$sources;0.1 compile-internal produced in /Users/g.sarapulov/PycharmProjects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-compile-internal.xml
-[debug] 	report for default#scala-redbook$sources;0.1 runtime-internal produced in /Users/g.sarapulov/PycharmProjects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-runtime-internal.xml
-[debug] 	report for default#scala-redbook$sources;0.1 test-internal produced in /Users/g.sarapulov/PycharmProjects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-test-internal.xml
-[debug] 	report for default#scala-redbook$sources;0.1 plugin produced in /Users/g.sarapulov/PycharmProjects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-plugin.xml
-[debug] 	report for default#scala-redbook$sources;0.1 pom produced in /Users/g.sarapulov/PycharmProjects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-pom.xml
-[debug] 	report for default#scala-redbook$sources;0.1 scala-tool produced in /Users/g.sarapulov/PycharmProjects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-scala-tool.xml
-[debug] 	resolve done (30ms resolve - 3499ms download)
+[debug] :: resolution report :: resolve 34ms :: artifacts dl 15ms
+[debug] 	report for default#scala-redbook$sources;0.1 compile produced in /Users/g.sarapulov/Projects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-compile.xml
+[debug] 	report for default#scala-redbook$sources;0.1 runtime produced in /Users/g.sarapulov/Projects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-runtime.xml
+[debug] 	report for default#scala-redbook$sources;0.1 test produced in /Users/g.sarapulov/Projects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-test.xml
+[debug] 	report for default#scala-redbook$sources;0.1 provided produced in /Users/g.sarapulov/Projects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-provided.xml
+[debug] 	report for default#scala-redbook$sources;0.1 optional produced in /Users/g.sarapulov/Projects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-optional.xml
+[debug] 	report for default#scala-redbook$sources;0.1 compile-internal produced in /Users/g.sarapulov/Projects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-compile-internal.xml
+[debug] 	report for default#scala-redbook$sources;0.1 runtime-internal produced in /Users/g.sarapulov/Projects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-runtime-internal.xml
+[debug] 	report for default#scala-redbook$sources;0.1 test-internal produced in /Users/g.sarapulov/Projects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-test-internal.xml
+[debug] 	report for default#scala-redbook$sources;0.1 plugin produced in /Users/g.sarapulov/Projects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-plugin.xml
+[debug] 	report for default#scala-redbook$sources;0.1 pom produced in /Users/g.sarapulov/Projects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-pom.xml
+[debug] 	report for default#scala-redbook$sources;0.1 scala-tool produced in /Users/g.sarapulov/Projects/draft/scala-redbook/target/scala-2.12/resolution-cache/reports/default-scala-redbook$sources-scala-tool.xml
+[debug] 	resolve done (34ms resolve - 15ms download)

@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage[hmarginratio=4:3, top=20mm, left=30mm, columnsep=20pt]{geometry} % Document 
+
+
+\title{CS 224N: Assignment 1}
+
+\begin{document}
+\maketitle
+\section{Softmax (10 points)}
+
+(a) (5 points) Prove that softmax is invariant to constant offsets in the input, that is,
+for any input vector $x$ and any constant $c$,
+Applying the law of total probability we have
+\begin{align*}
+%P(\eta = s) &= \sum_{k=s}^{\infty} P(\eta = s | \xi = k) P(\xi = k)
+%= \sum_{k=s}^{\infty} \frac{k!}{s! (k - s)!} p^s (1-p)^{k-s}  \frac{e^{-\lambda} \lambda^k}{k!} \\
+%&= \frac{e^{-\lambda} \lambda^s p^s}{s!} \cdot \sum_{k=s}^{\infty} \frac{(\lambda (1 - p))^{k - s}}{(k-s)!}
+softmax(\mathbf{x}) &= softmax(\mathbf{x} + c)
+\end{align*}
+where $x + c$ means adding the constant c to every dimension of $x$.
+Remember that
+\begin{align*}
+softmax(\mathbf{x})_{i} &= \frac{e^{x_i}}{\sum_{j} e^{x_j}}
+\end{align*}
+Note: In practice, we make use of this property and choose c = − maxi xi when computing softmax
+probabilities for numerical stability (i.e., subtracting its maximum element from all elements of x).
+
+
+Solution:
+\begin{align*}
+%P(\eta = s) &= \sum_{k=s}^{\infty} P(\eta = s | \xi = k) P(\xi = k)
+%= \sum_{k=s}^{\infty} \frac{k!}{s! (k - s)!} p^s (1-p)^{k-s}  \frac{e^{-\lambda} \lambda^k}{k!} \\
+%&= \frac{e^{-\lambda} \lambda^s p^s}{s!} \cdot \sum_{k=s}^{\infty} \frac{(\lambda (1 - p))^{k - s}}{(k-s)!}
+%softmax(\mathbf{x})_{i} &= \exp{\frac{1}{2}}
+softmax(\mathbf{x} + c)_{i} &= \frac{e^{x_i + c}}{\sum_{j} e^{x_j + c}}
+= \frac{e^c \cdot e^{x_i}}{e^c \cdot \sum_{j} e^{x_j}} = \frac{e^{x_i}}{\sum_{j} e^{x_j}} = softmax(\mathbf{x})_{i}
+\end{align*}
+
+\section{Neural Network basics (30 points)}
+(a) (3 points) Derive the gradients of the sigmoid function and show that it can be rewritten as a function
+of the function value (i.e., in some expression where only $\sigma (x)$, but not $x$, is present). Assume that the
+input $x$ is a scalar for this question. Recall, the sigmoid function is
+\begin{align*}
+\sigma(x) &= \frac{1}{1 + e^{-x}}
+\end{align*}
+
+
+Solution:
+\begin{align*}
+\frac{\partial \sigma (x)}{\partial x} &= \frac{e^{-x}}{(1 + e^{-x})^2}
+= \frac{1}{1 + e^{-x}} \cdot \frac{e^{-x}}{1 + e^{-x}} = \sigma(x) \cdot (1 - \sigma(x))
+\end{align*}
+
+(b)(3 points) Derive the gradient with regard to the inputs of a softmax function when cross entropy loss
+is used for evaluation, i.e., find the gradients with respect to the softmax input vector $\theta$, when the
+prediction is made by $\hat{y} = softmax(\theta)$. Remember the cross entropy function is
+\begin{align*}
+CE(y, \hat{y}) &= - \sum_{i} y_i log (\hat{y_i})
+\end{align*}
+
+where y is the one-hot label vector, and \^{y} is the predicted probability vector for all classes. (Hint: you
+might want to consider the fact many elements of y are zeros, and assume that only the $k$-th dimension
+of $y$ is one.)
+
+Solution:
+%\begin{align*}
+%\frac{\partial CE(y, \hat{y})}{\partial \theta} &= \frac{\partial (- \sum_{i} y_i log (\hat{y_i}))}{\partial \theta}
+%= \frac{\partial (- \sum_{i} y_i log (softmax(\theta)))}{\partial \theta}
+%= \frac{\partial (- \sum_{i} y_i log (\frac{e^{\theta}}{\sum e^{\theta}}))}{\partial \theta}
+%\end{align*}
+
+\begin{align*}
+\frac{\partial CE(y, \hat{y})}{\partial \theta}
+= \frac{\partial CE(y, \hat{y})}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial \theta} \\
+\end{align*}
+
+Derivative of the fiorst part is
+\begin{align*}
+\frac{\partial CE(y, \hat{y})}{\partial \hat{y}}
+= \frac{\partial (- y^T log \hat{y})}{\partial \hat{y}}
+= \frac{-y^T}{\hat{y}}
+\end{align*}
+
+Derivative of the second part is
+\begin{align*}
+\frac{\partial \hat{y}}{\partial \theta}
+= \frac{\partial (\frac{e^{\theta}}{\sum_j e^{\theta}})}{\partial \theta}
+= \frac{e^{\theta} \cdot (\sum_j e^{\theta} - e^{\theta})}{(\sum_j e^{\theta})^2}
+= \hat{y} \cdot (1 - \hat{y})
+\end{align*}
+
+Finally
+\begin{align*}
+\frac{\partial CE(y, \hat{y})}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial \theta}
+= \frac{-y^T}{\hat{y}} \cdot \hat{y} \cdot (1 - \hat{y})
+= \hat{y} \cdot (1 - \hat{y})
+\end{align*}
+
+\end{document}
