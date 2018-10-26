@@ -1,5 +1,8 @@
 {
+  "data/test/test_input.py::test_get_negative_indices": true,
+  "data/test/test_input.py::test_get_positive_indices": true,
   "data/test/test_input.py::test_monkeypatch": true,
+  "data/test/test_input.py::test_sample_indices": true,
   "data/test/test_input.py::test_sample_positive_index": true,
   "io/test/test_input.py": true,
   "test/test_input.py": true

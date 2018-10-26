@@ -3,8 +3,5 @@
   "data/test/test_input.py::test_parse_filename",
   "data/test/test_input.py::test_get_filename_for_idx",
   "data/test/test_input.py::test_get_files_list",
-  "data/test/test_input.py::test_register_data",
-  "data/test/test_input.py::test_get_positive_indices",
-  "data/test/test_input.py::test_get_negative_indices",
-  "data/test/test_input.py::test_sample_indices"
+  "data/test/test_input.py::test_register_data"
 ]
