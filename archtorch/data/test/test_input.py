@@ -1,6 +1,6 @@
 import pytest
 import unittest.mock
-from data.input import FileParser, SiameseData
+from data.input import FileParser, DataSampler
 import glob
 
 path = '/ext/data/'
@@ -8,7 +8,7 @@ extension = '.txt'
 files_list = ['1_1', '1_2', '2_1', '2_2']
 fp = FileParser(extension=extension, sep=' ')
 
-sd = SiameseData(fp, path)
+sd = DataSampler(fp, path)
 sd.data_idx = files_list
 
 
@@ -39,15 +39,3 @@ def test_register_data(monkeypatch):
     expected = ['1_1', '1_2', '2_1', '2_2']
     monkeypatch.setattr('glob.glob', lambda path: [path[:-1] + x + extension for x in files_list])
     assert fp.register_data(path) == expected
-
-
-def test_get_positive_indices():
-    assert sd.get_positive_indices('1_1') == ['1_1', '1_2']
-
-
-def test_get_negative_indices():
-    assert sd.get_negative_indices('1_1') == ['2_1', '2_2']
-
-
-def test_sample_indices():
-    assert sd.sample_indices(0) == (('1_1', '1_2'), 0) or (('1_1', '2_1'), 1) or (('1_1', '2_2'), 1)
