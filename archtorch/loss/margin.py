@@ -14,8 +14,13 @@ class ContrastiveLoss(nn.Module):
 
     def forward(self, output1, output2, target, size_average=True):
         distances = (output2 - output1).pow(2).sum(1)  # squared distances
-        losses = 0.5 * (target.float() * distances +
-                        (1 + -1 * target).float() * F.relu(self.margin - distances.sqrt()).pow(2))
+        # distances = (output1 * output2).sum() / output1.norm(2) / output2.norm(2)
+        # distances = (output2 - output1).abs().sum(1)
+        loss_similar = target.float() * distances
+        loss_dissimilar = (1 - target).float() * F.relu(self.margin - distances.sqrt()).pow(2)
+        losses = 0.1 * loss_similar + 0.9 * loss_dissimilar
+        # losses = 0.5 * (target.float() * distances +
+        #                 (1 + -1 * target).float() * F.relu(self.margin - distances.sqrt()).pow(2))
         return losses.mean() if size_average else losses.sum()
 
 

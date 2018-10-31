@@ -5,7 +5,7 @@ import torch.nn as nn
 class Encoder(nn.Module):
     def __init__(self):
         super(Encoder, self).__init__()
-        self.encoding_net = nn.Sequential(nn.Linear(400, 5), nn.ReLU())
+        self.encoding_net = nn.Sequential(nn.Linear(400, 100), nn.Tanh(), nn.Linear(100, 20))#, nn.LeakyReLU())
 
     def forward(self, x):
         output = self.encoding_net(x)
@@ -30,8 +30,9 @@ class Discriminator(nn.Module):
     def __init__(self, siamese_net):
         super(Discriminator, self).__init__()
         self.siamese_net = siamese_net
+        self.discrimination_net = nn.Sequential(nn.Linear(20, 2), nn.Sigmoid())
 
     def forward(self, x1, x2):
         x1, x2 = self.siamese_net(x1, x2)
-        z = exp(-(x1 - x2).norm())
-        return tensor((z, 1-z))
+        output = self.discrimination_net(x1 - x2)
+        return output

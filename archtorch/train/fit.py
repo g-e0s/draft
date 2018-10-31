@@ -1,6 +1,6 @@
 import torch
 from torch.utils.data import DataLoader
-from torch.optim import Adam, lr_scheduler
+from torch.optim import Adam, lr_scheduler, Adagrad
 import numpy as np
 
 

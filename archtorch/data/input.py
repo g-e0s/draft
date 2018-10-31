@@ -156,3 +156,23 @@ class SiameseData(Dataset):
 
     def __len__(self):
         return len(self.dataset)
+
+
+class EncodedData(Dataset):
+    """
+    Train: For each sample creates randomly a positive or a negative pair
+    Test: Creates fixed pairs for testing
+    """
+
+    def __init__(self, siamese_loader, model):
+        self.siamese_loader = siamese_loader
+        self.model = model
+
+    def __getitem__(self, index):
+        (x0, x1), target = self.siamese_loader.__getitem__(index)
+        x0, x1 = self.model(x0, x1)
+        return (x0, x1), target
+
+    def __len__(self):
+        return len(self.siamese_loader.dataset)
+
