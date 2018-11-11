@@ -18,7 +18,7 @@ class Config(object):
     """
     n_features = 36
     n_classes = 3
-    dropout = 0.5  # (p_drop in the handout)
+    dropout = 0.7  # (p_drop in the handout)
     embed_size = 50
     hidden_size = 200
     batch_size = 1024
@@ -57,7 +57,7 @@ class ParserModel(Model):
         self.input_placeholder = tf.placeholder(tf.int32, shape=(None, self.config.n_features))
         self.labels_placeholder = tf.placeholder(tf.float32, shape=(None, self.config.n_classes))
         self.dropout_placeholder = tf.placeholder(tf.float32)
-        self.l_reg = 0
+        self.l_reg = 0.0
         ### END YOUR CODE
 
     def create_feed_dict(self, inputs_batch, labels_batch=None, dropout=0):
@@ -139,11 +139,19 @@ class ParserModel(Model):
         x = self.add_embedding()
         ### YOUR CODE HERE
         xavier = xavier_weight_init()
+        # self.W = W = tf.Variable(xavier((self.config.n_features * self.config.embed_size, self.config.hidden_size)))
+        # self.U = U = tf.Variable(xavier((self.config.hidden_size, self.config.n_classes)))
+        # self.b1 = b1 = tf.Variable(tf.zeros(self.config.hidden_size), name='b1')
+        # self.b2 = b2 = tf.Variable(tf.zeros(self.config.n_classes), name='b2')
+        #
+        # h = tf.nn.relu(tf.matmul(x, W) + b1)
+        # h_drop = tf.nn.dropout(h, 1-self.dropout_placeholder)
+        # pred = tf.matmul(h_drop, U) + b2
         with tf.variable_scope('transformation'):
             self.W = W = xavier((self.config.n_features * self.config.embed_size, self.config.hidden_size))
-            self.U = U = xavier((self.config.hidden_size, self.config.n_classes))
-            self.b1 = b1 = tf.Variable(tf.zeros(self.config.hidden_size), name='b1')
-            self.b2 = b2 = tf.Variable(tf.zeros(self.config.n_classes), name='b2')
+            U = xavier((self.config.hidden_size, self.config.n_classes))
+            b1 = tf.Variable(tf.random_uniform((self.config.hidden_size,)))
+            b2 = tf.Variable(tf.random_uniform((self.config.n_classes,)))
 
             h = tf.nn.relu(tf.matmul(x, W) + b1)
             # dropout = tf.to_float(tf.random_uniform((self.config.hidden_size,), 0, 1) >= self.dropout_placeholder)

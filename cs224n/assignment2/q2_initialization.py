@@ -26,7 +26,7 @@ def xavier_weight_init():
         """
         ### YOUR CODE HERE
         eps = (6 / sum(shape)) ** 0.5
-        out = tf.random_uniform(shape, -eps, eps)
+        out = tf.Variable(tf.random_uniform(shape, -eps, eps))
         ### END YOUR CODE
         return out
     # Returns defined initializer function.
